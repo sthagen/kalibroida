@@ -1,15 +1,13 @@
-const { suite } = require('uvu');
-const assert = require('uvu/assert');
+const { readFile } = require('fs/promises')
+const { suite } = require('uvu')
+const assert = require('uvu/assert')
 const kalibroida = require('../src/process.js')
 
 const echo = (arg) => arg
+const vectors = JSON.parse(await readFile("./fixtures/process.json", "utf8")).forEach((_, i, a) => a[0] = eval(a[0]))
 
-let vector = ['echo', 42, 42]
-vector[0] = eval(vector[0])
 const Well = suite("bar")
 Well("foo", () => {
-  [
-    [...vector],
-  ].forEach( kalibroida.process( {"method": "assert.is"} ) )
+  vectors.forEach( kalibroida.process( {"method": "assert.is"} ) )
 })
 Well.run()
