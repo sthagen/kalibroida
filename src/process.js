@@ -1,7 +1,7 @@
 const { test } = require('uvu')
 const assert = require('uvu/assert')
 
-const process = (options) => {
+exports.process = (options) => {
   return vector => {
     console.log(vector, options)
     const method = typeof(options.method) === 'string'
@@ -16,5 +16,3 @@ const process = (options) => {
     console.log("  expectation: ", expectation)
   }
 }
-
-module.exports = { process }
