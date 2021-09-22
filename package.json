@@ -1,0 +1,21 @@
+{
+  "name": "kalibroida",
+  "version": "0.0.1",
+  "repository": "sthagen/kalibroida",
+  "description": "Calibrate software through code and data driven tests.
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "bin": {
+    "kalibroida": "bin.js"
+  },
+  "dependencies": {
+    "dequal": "^2.0.0",
+    "diff": "^5.0.0",
+    "kleur": "^4.0.3",
+    "sade": "^1.7.3",
+    "totalist": "^2.0.0",
+    "uvu": "^0.5.1"
+  }
+}
