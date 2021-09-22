@@ -2,7 +2,7 @@
   "name": "kalibroida",
   "version": "0.0.1",
   "repository": "sthagen/kalibroida",
-  "description": "Calibrate software through code and data driven tests.
+  "description": "Calibrate software through code and data driven tests.",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "types": "index.d.ts",
