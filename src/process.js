@@ -1,6 +1,3 @@
-const { test } = require('uvu')
-const assert = require('uvu/assert')
-
 exports.process = (options) => {
   return vector => {
     console.log(vector, options)
@@ -14,5 +11,6 @@ exports.process = (options) => {
     console.log("          fut: ", function_under_test)
     console.log("   parameters: ", parameters)
     console.log("  expectation: ", expectation)
+    method(function_under_test(...parameters), expectation)
   }
 }
