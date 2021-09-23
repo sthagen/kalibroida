@@ -54,4 +54,21 @@ const process = (options) => {
     }
 }
 
-module.exports = { process }
+/**
+ * Test builder within suites relying on convention to use system under test object as anchor for functions under test.
+ * 
+ * @param executor is the test suite object
+ * @param sut is the object with all incoming functions under test as members
+ * @param test_cases an array of pairs with the first element naming the test and the second the fixture path
+ */
+const build_tests = (executor, sut, test_cases) => {
+    test_cases.forEach(t =>
+        executor(t[0], () => {
+            let vectors = require(t[1])
+            vectors.forEach(e => e[0] = eval(e[0]))
+            vectors.forEach(process())
+        })
+    )
+}
+
+module.exports = { process, build_tests }
