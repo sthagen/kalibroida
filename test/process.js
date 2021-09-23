@@ -1,7 +1,7 @@
 const { suite } = require('uvu')
 const assert = require('uvu/assert')
 
-const { process, build_tests } = require('../src/process.js')
+const kalibroida = require('../src/process.js')
 
 const echo = (arg) => arg
 
@@ -10,7 +10,7 @@ const default_options = {method: assert.is, trace: false}
 
 const build_tests_proxy = (executor, test_cases, options) => {
     test_cases.forEach(tc => tc[1] = `${fixtures}${tc[1]}`)
-    build_tests(echo, executor, test_cases, options)
+    kalibroida.build_tests(echo, executor, test_cases, options)
     return executor
 }
 
