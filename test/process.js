@@ -1,7 +1,7 @@
 const { suite } = require('uvu')
 const assert = require('uvu/assert')
 
-const { kalibroida, build_tests } = require('../src/process.js')
+const { kalibroida=process, build_tests } = require('../src/process.js')
 
 const echo = (arg) => arg
 
