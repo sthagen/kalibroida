@@ -49,7 +49,7 @@ const process = (options) => {
                 method(function_under_test(...parameters).join(zipper), expectation.join(zipper))
             }
         } else {
-            assert.is(false, true, `test vector data problem: ${JSON.stringify(data)}`)
+            assert.is(false, true, `test vector data problem: ${JSON.stringify(vector)}`)
         }
     }
 }
