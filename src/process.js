@@ -1,4 +1,3 @@
-const assert = require('uvu/assert');
 
 /**
  * Generate function to process the test data from array and execute tests.
@@ -57,19 +56,36 @@ const process = (options) => {
 /**
  * Test builder within suites relying on convention to use system under test object as anchor for functions under test.
  *
+ * The test cases must be an array of arrays with only strings as elements.
+ * The fixture file absolute path must be present as first or only element.
+ * Optionally a test name can be present as second element in addition - if not the name will be derived from fixture.
+ *
  * @param sut is the object with all incoming functions under test as members
  * @param executor is the test suite object
- * @param test_cases an array of pairs with the first element naming the test and the second the fixture path
+ * @param test_cases an array of pairs with the first element the fixture path and the optional second naming the test
  * @param options an optional object to pass through for assert and trace modes
  */
 const build_tests = (sut, executor, test_cases, options) => {
-    test_cases.forEach(t =>
-        executor(t[0], () => {
-            let vectors = require(t[1])
+    test_cases.forEach(tc => {
+        const fixture = tc[0]
+        const name = tc.length === 2
+            ? tc[1]
+            : fixture  // Derive test name from fixture file name
+                .split('/')  // Mostly works as universal path separator
+                .pop()  // use the last element only (assuming it is the file name
+                .replace('_vectors.json', '')  // remove boilerplate from file name, keep the specific part
+                .replaceAll('_', ' ').split(' ')  // prepare title case transform - array of words
+                .map(s => s.slice(0, 1).toUpperCase() + s.slice(1).toLowerCase())
+                .join(' ') // back to single string
+
+        executor(name, () => {
+            let vectors = require(fixture)
             vectors.forEach(e => e[0] = eval(e[0]))
             vectors.forEach(process(options))
         })
-    )
+    })
+    return executor
 }
 
 module.exports = { process, build_tests }
+
