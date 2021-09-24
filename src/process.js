@@ -73,7 +73,7 @@ const build_tests = (sut, executor, test_cases, options) => {
             : fixture  // Derive test name from fixture file name
                 .split('/')  // Mostly works as universal path separator
                 .pop()  // use the last element only (assuming it is the file name
-                .replace('_vectors.json', '')  // remove boilerplate from file name, keep the specific part
+                .replace('.json', '')  // remove extension from fixture file name, keep the specific part (base)
                 .replaceAll('_', ' ').split(' ')  // prepare title case transform - array of words
                 .map(s => s.slice(0, 1).toUpperCase() + s.slice(1).toLowerCase())
                 .join(' ') // back to single string
