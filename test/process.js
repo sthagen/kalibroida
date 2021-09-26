@@ -3,7 +3,8 @@ const assert = require('uvu/assert')
 
 const kalibroida = require('../src/process.js')
 
-const echo = (arg) => arg
+const sut = {}
+sut.echo = (arg) => arg
 
 const fixtures = `${__dirname}/fixtures/`
 const default_options = {method: assert.is, trace: false}

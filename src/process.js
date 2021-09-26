@@ -1,3 +1,5 @@
+const { suite } = require('uvu')
+const assert = require('uvu/assert')
 
 /**
  * Generate function to process the test data from array and execute tests.
