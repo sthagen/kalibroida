@@ -102,7 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
-
-# Local development artifacts
-*~
-.idea
+weg.js
+package-lock.json
+site/
+docs/local_api.md
