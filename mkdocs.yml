@@ -26,9 +26,9 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/sthagen/konfiguroida
+      link: https://github.com/sthagen/kalibroida
     - icon: fontawesome/brands/npm
-      link: https://www.npmjs.com/package/konfiguroida
+      link: https://www.npmjs.com/package/kalibroida
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/shage
 
