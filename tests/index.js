@@ -1,7 +1,7 @@
 const { suite } = require('uvu')
 const assert = require('uvu/assert')
 
-const kalibroida = require('../src/process.js')
+const kalibroida = require('../src/index.js')
 
 const sut = {}
 sut.echo = (arg) => arg
@@ -25,7 +25,7 @@ const build_tests_proxy = (executor, test_cases, options) => {
 }
 
 
-let vectors = require('./fixtures/process.json')
+let vectors = require('./fixtures/kalibroida.json')
 vectors.forEach(e => e[0] = eval(e[0]))
 
 const Well = suite("bar")
@@ -38,7 +38,25 @@ const Other = suite('Fake some other test suite')
 build_tests_proxy(
     Other,
     [
-        ['process.json', 'bar, baz, or quux'],
+        ['kalibroida.json', 'bar, baz, or quux'],
+    ],
+    default_options
+).run()
+
+const Chatty = suite('Fake some chatty test suite')
+build_tests_proxy(
+    Chatty,
+    [
+        ['kalibroida.json', 'bar, baz, or quux'],
+    ],
+    {method: assert.is, trace: true}
+).run()
+
+const NoName = suite('Fake some nameless test suite')
+build_tests_proxy(
+    NoName,
+    [
+        ['kalibroida.json'],
     ],
     default_options
 ).run()
