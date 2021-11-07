@@ -1,21 +1,31 @@
 {
-  "name": "kalibroida",
-  "version": "0.0.1",
-  "repository": "sthagen/kalibroida",
-  "description": "Calibrate software through code and data driven tests.",
-  "module": "dist/index.mjs",
-  "main": "dist/index.js",
-  "types": "index.d.ts",
-  "license": "MIT",
-  "bin": {
-    "kalibroida": "bin.js"
-  },
+  "author": "Stefan Hagen <stefan@hagen.link> (https://stefan-hagen.website)",
+  "bugs": "https://github.com/sthagen/kalibroida/issues",
   "dependencies": {
-    "dequal": "^2.0.0",
-    "diff": "^5.0.0",
-    "kleur": "^4.0.3",
-    "sade": "^1.7.3",
-    "totalist": "^2.0.0",
-    "uvu": "^0.5.1"
-  }
+    "uvu": "^0.5.2"
+  },
+  "devDependencies": {
+    "c8": "^7.10.0"
+  },
+  "description": "Calibrate (Finnish kalibroida) software through code and data driven tests.",
+  "engines": {
+    "node": ">=6"
+  },
+  "homepage": "https://sthagen.github.io/kalibroida/",
+  "keywords": [
+    "developer-tools",
+    "test-automation"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "kalibroida",
+  "private": false,
+  "repository": "github:sthagen/kalibroida",
+  "scripts": {
+    "test": "uvu tests",
+    "test:coverage": "c8 --include=src npm test",
+    "test:report": "c8 report --reporter=text-lcov > coverage.lcov",
+    "test:html": "c8 report --reporter=html"
+  },
+  "version": "2021.11.7"
 }
