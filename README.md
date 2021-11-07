@@ -1,6 +1,6 @@
 # kalibroida
 
-Calibrate software through code and data driven tests.
+Calibrate (Finnish kalibroida) software through code and data driven tests.
 
 ## Status
 
