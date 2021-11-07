@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#kalibroida" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -244,10 +249,58 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
         Introduction
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    Status
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -335,6 +388,54 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    Status
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -342,9 +443,27 @@
                 
                 
                 
-                  <h1>Introduction</h1>
-                
-                
+                <h1 id="kalibroida">Kalibroida</h1>
+<p><a href="https://github.com/sthagen/kalibroida/blob/default/LICENSE"><img alt="license" src="https://img.shields.io/github/license/sthagen/kalibroida.svg?style=flat" /></a>
+<a href="https://www.npmjs.com/package/kalibroida"><img alt="npm version" src="https://badge.fury.io/js/kalibroida.svg" /></a>
+<a href="https://www.npmjs.com/package/kalibroida"><img alt="npm" src="https://img.shields.io/npm/dm/kalibroida.svg" /></a></p>
+<p>Calibrate (Finnish kalibroida) software through code and data driven tests.</p>
+<h2 id="synopsis">Synopsis</h2>
+<div class="highlight"><pre><span></span><code><span class="c1">// ...</span>
+</code></pre></div>
+<h2 id="description">Description</h2>
+<p>Convention over configuration for javascript unit tests.
+Kalibroida delegeates to <a href="https://github.com/lukeed/uvu">uvu</a> for the tests kalibroida functions generate from data files (currently JSON supported).</p>
+<p>The structure of the data entries (test vectors) in a JSON array follows the convention of providing: </p>
+<ul>
+<li>a string as first entry representing the System Under Test (SUT),</li>
+<li>the final entry is the expectation, </li>
+<li>and all entries between represent positional parameters to the function under test.</li>
+</ul>
+<p><strong>Note</strong>: The implementation to test must be imported as <code>sut</code> and all evaluated strings from the first entries of the test vectors must resolve to functions hanging off of <code>sut</code>.</p>
+<h2 id="status">Status</h2>
+<p>Experimental.</p>
+<p><strong>Note</strong>: The default branch is <code>default</code>.</p>
                 
                   
 
