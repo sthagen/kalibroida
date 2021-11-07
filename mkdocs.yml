@@ -1,0 +1,60 @@
+site_name: Kalibroida
+site_description: Calibrate (Finnish kalibroida) software through code and data driven tests.
+
+theme:
+  name: 'material'
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/sthagen/konfiguroida
+    - icon: fontawesome/brands/npm
+      link: https://www.npmjs.com/package/konfiguroida
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/shage
+
+copyright: Copyright &copy; 2021 Stefan Hagen under the MIT license
+
+repo_name: sthagen/kalibroida
+repo_url: https://github.com/sthagen/kalibroida
+edit_uri: ""
+
+plugins:
+  - search
+  - mkdocstrings
+
+nav:
+  - Introduction: 'index.md'
+  - Install: 'install.md'
+  - Usage: 'usage.md'
+  - API: 'api.md'
+  - Developer: 'developer.md'
+  - Changes: 'changes.md'
+
+markdown_extensions:
+  - mkautodoc
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+extra_javascript:
+
