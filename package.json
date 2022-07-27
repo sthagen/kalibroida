@@ -1,6 +1,6 @@
 {
   "author": "Stefan Hagen <stefan@hagen.link> (https://stefan-hagen.website)",
-  "bugs": "https://github.com/sthagen/kalibroida/issues",
+  "bugs": "https://todo.sr.ht/~sthagen/kalibroida",
   "dependencies": {
     "uvu": "^0.5.2"
   },
@@ -11,7 +11,7 @@
   "engines": {
     "node": ">=6"
   },
-  "homepage": "https://sthagen.github.io/kalibroida/",
+  "homepage": "https://codes.dilettant.life/docs/kalibroida/",
   "keywords": [
     "developer-tools",
     "test-automation"
@@ -20,7 +20,7 @@
   "main": "src/index.js",
   "name": "kalibroida",
   "private": false,
-  "repository": "github:sthagen/kalibroida",
+  "repository": "https://todo.sr.ht/~sthagen/kalibroida",
   "scripts": {
     "test": "uvu tests",
     "test:coverage": "c8 --include=src npm test",

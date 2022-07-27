@@ -26,16 +26,16 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/sthagen/kalibroida
+      link: https://git.sr.ht/~sthagen/kalibroida
     - icon: fontawesome/brands/npm
       link: https://www.npmjs.com/package/kalibroida
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/shage
 
-copyright: Copyright &copy; 2021 Stefan Hagen under the MIT license
+copyright: Copyright &copy; 2022 Stefan Hagen under the MIT license
 
-repo_name: sthagen/kalibroida
-repo_url: https://github.com/sthagen/kalibroida
+repo_name: ~sthagen/kalibroida
+repo_url: https://git.sr.ht/~sthagen/kalibroida
 edit_uri: ""
 
 plugins:
