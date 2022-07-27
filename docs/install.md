@@ -2,8 +2,8 @@
 
 ```console
 # using npm
-npm install kalibroida
+❯ npm install kalibroida
 
 # using yarn
-yarn add kalibroida
+❯ yarn add kalibroida
 ```
