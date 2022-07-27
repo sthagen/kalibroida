@@ -10,6 +10,7 @@ Calibrate (Finnish kalibroida) software through code and data driven tests.
 ## Bug Tracker
 
 Feature requests and bug reports are bested entered in the [todos of kalibroida](https://todo.sr.ht/~sthagen/kalibroida).
+
 ## Primary Source repository
 
 The primary source repository of [kalibroida is at sourcehut](https://git.sr.ht/~sthagen/kalibroida)
