@@ -1,34 +1,16 @@
 # Kalibroida
 
-[![license](https://img.shields.io/github/license/sthagen/kalibroida.svg?style=flat)](https://github.com/sthagen/kalibroida/blob/default/LICENSE)
+Calibrate (Finnish kalibroida) software through code and data driven tests.
+
+[License: MIT](https://git.sr.ht/~sthagen/kalibroida/tree/default/item/LICENSE)
+
 [![npm version](https://badge.fury.io/js/kalibroida.svg)](https://www.npmjs.com/package/kalibroida)
 [![npm](https://img.shields.io/npm/dm/kalibroida.svg)](https://www.npmjs.com/package/kalibroida)
 
-Calibrate (Finnish kalibroida) software through code and data driven tests.
+## Bug Tracker
 
-## Synopsis
+Feature requests and bug reports are bested entered in the [todos of kalibroida](https://todo.sr.ht/~sthagen/kalibroida).
+## Primary Source repository
 
-```javascript
-// ...
-```
-
-## Description
-
-Convention over configuration for javascript unit tests.
-Kalibroida delegeates to [uvu](https://github.com/lukeed/uvu) for the tests kalibroida functions generate from data files (currently JSON supported).
-
-The structure of the data entries (test vectors) in a JSON array follows the convention of providing: 
-
-* a string as first entry representing the System Under Test (SUT),
-* the final entry is the expectation, 
-* and all entries between represent positional parameters to the function under test.
-
-**Note**: The implementation to test must be imported as `sut` and all evaluated strings from the first entries of the test vectors must resolve to functions hanging off of `sut`.
-
-
-## Status
-
-Experimental.
-
-**Note**: The default branch is `default`.
-
+The primary source repository of [kalibroida is at sourcehut](https://git.sr.ht/~sthagen/kalibroida)
+a collection of tools useful for software development.
